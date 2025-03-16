@@ -41,40 +41,10 @@
                       <!-- inner main nav area -->
                       <div class="inner_main_nav_area">
                         <ul>
-                            <li><a href="#">Home<i class="icofont-thin-down"></i></a>
-                                <ul class="sub_menu">
-                                    <li><a href="index.html">Home-Main</a></li>
-                                    <li><a href="landing.html">Home-Landing</a></li>
-                                    <li><a href="video.html">Home-Video</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="#">Pages<i class="icofont-thin-down"></i></a>
-                                <ul class="sub_menu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="#">Portfolio<i class="icofont-thin-down"></i></a>
-                                        <ul class="sub_menu">
-                                            <li><a href="portfolio-2column.html">Portfolio 2Column</a></li>
-                                            <li><a href="portfolio-3column.html">Portfolio 3Column</a></li>
-                                            <li><a href="portfolio-4column.html">Portfolio 4Column</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                    <li><a href="choose.html">Why Choose Us</a></li>
-                                    <li><a href="faq.html">Faq</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Blogs<i class="icofont-thin-down"></i></a>
-                                <ul class="sub_menu">
-                                    <li><a href="blogleft-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-left2column.html">Blog Left 2Column</a></li>
-                                    <li><a href="blogright-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-right2column.html">Blog Right 2Column</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="products.html">Produtos</a></li>
+                            <li><a href="shop.html">Loja</a></li>
+                            <li><a href="contact.html">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -101,16 +71,20 @@
                         <div class="theme_right_area">
                             <!-- main nav icons -->
                             <div class="main_nav_icons_middle">
-                                <a href="#"><i class="icofont-bag-alt"></i>
-                                    <span>0</span>
+                                <a href="#">
+                                    <i class="icofont-bag-alt"></i>
+                                    <span class="cart-count">0</span>
                                 </a>
-                                <div class="main_nav_middle_box_item">
-                                    <p>No products in the cart.</p>
+                                <div class="main_nav_middle_box_item cart-items">
+                                    <p class="empty-cart">Nenhum produto adicionado no carrinho</p>
+                                    <ul class="cart-product-list">
+                                        <!-- Carrinho dinâmico aqui -->
+                                    </ul>
                                 </div>
                             </div>
                             <!-- header btn -->
                             <div class="donate_btn_header">
-                                <a class="dtbtn" href="#">Buy Now</a>	
+                                <a class="dtbtn" href="#">Compre Agora</a>	
                             </div>
                         </div>
                     </div>
@@ -131,63 +105,47 @@
                        <img src="assets/image/logo_m.png" alt="mergo">
                        </a>
                     </div>
-                    <div class="mobile_menu_option">
-                       <div class="mobile_menu_o mobile_opicon">
-                          <i class="icofont-navigation-menu openclass"></i>
-                       </div>
-                       <div class="mobile_menu_inner mobile_p">
-                          <div class="mobile_menu_content">
-                             <div class="mobile_menu_logo text-center">
-                                <a href="index.html" title="mergo">
-                                <img src="assets/image/logo_m.png" alt="mergo">
-                                </a>
-                             </div>
-                             <div class="menu_area mobile-menu">
-                                <nav class="medeno_menu">
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Home</a>
-                                            <ul class="sub_menu">
-                                                <li><a href="index.html">Home-Main</a></li>
-                                                <li><a href="landing.html">Home-Landing</a></li>
-                                                <li><a href="video.html">Home-Video</a></li>
+                    <div class="mobile_menu_right" style="display: flex; align-items: center; gap: 15px;">
+                        <div class="main_nav_icons_middle">
+                            <a href="#">
+                                <i class="icofont-bag-alt"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="main_nav_middle_box_item cart-items">
+                                <p class="empty-cart">Nenhum produto adicionado no carrinho</p>
+                                <ul class="cart-product-list">
+                                            <!-- Carrinho dinâmico aqui -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile_menu_option">
+                            <div class="mobile_menu_o mobile_opicon">
+                                <i class="icofont-navigation-menu openclass"></i>
+                            </div>
+                            <div class="mobile_menu_inner mobile_p">
+                                <div class="mobile_menu_content">
+                                    <div class="mobile_menu_logo text-center">
+                                        <a href="index.html" title="mergo">
+                                        <img src="assets/image/logo_m.png" alt="mergo">
+                                        </a>
+                                    </div>
+                                    <div class="menu_area mobile-menu">
+                                        <nav class="medeno_menu">
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="products.html">Produtos</a></li>
+                                                <li><a href="shop.html">Loja</a></li>
+                                                <li><a href="contact.html">Contato</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="#">Pages</a>
-                                            <ul class="sub_menu">
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="#">Portfolio</a>
-                                                    <ul class="sub_menu">
-                                                        <li><a href="portfolio-2column.html">Portfolio 2Column</a></li>
-                                                        <li><a href="portfolio-3column.html">Portfolio 3Column</a></li>
-                                                        <li><a href="portfolio-4column.html">Portfolio 4Column</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="testimonial.html">Testimonial</a></li>
-                                                <li><a href="choose.html">Why Choose Us</a></li>
-                                                <li><a href="faq.html">Faq</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Blogs</a>
-                                            <ul class="sub_menu">
-                                                <li><a href="blogleft-sidebar.html">Blog Left Sidebar</a></li>
-                                                <li><a href="blog-left2column.html">Blog Left 2Column</a></li>
-                                                <li><a href="blogright-sidebar.html">Blog Right Sidebar</a></li>
-                                                <li><a href="blog-right2column.html">Blog Right 2Column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                 </nav>
-                             </div>
-                             <div class="mobile_menu_o mobile_cicon">
-                                <i class="icofont-close closeclass"></i>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="mobile_overlay"></div>
+                                        </nav>
+                                    </div>
+                                    <div class="mobile_menu_o mobile_cicon">
+                                        <i class="icofont-close closeclass"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile_overlay"></div>
+                        </div>
                     </div>
                  </div>
               </div>
@@ -630,50 +588,50 @@
     </div>
     <!-- call to action area end -->
 
-    <!-- brand title start -->
-    <div class="brand_title wow animate__animated animate__zoomIn" data-wow-delay=".5s">
-        <div class="container">
-            <div class="row brand_active">
-                <div class="col-lg-12">
+        <!-- brand title start -->
+        <div class="brand_title wow animate__animated animate__zoomIn" data-wow-delay=".5s">
+            <div class="container">
+                <div class="row brand_active">
+                    <div class="col-lg-12">
+                            <!-- brand img -->
+                        <div class="brand_img">
+                            <img src="assets/image/l-oreal-3.svg" alt="brand_1">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
                         <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_1.png" alt="brand_1">
+                        <div class="brand_img">
+                            <img src="assets/image/dove-5.svg" alt="brand_2">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_2.png" alt="brand_2">
+                    <div class="col-lg-12">
+                        <!-- brand img -->
+                        <div class="brand_img">
+                            <img src="assets/image/natura-1.svg" alt="brand_3">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_3.png" alt="brand_3">
+                    <div class="col-lg-12">
+                        <!-- brand img -->
+                        <div class="brand_img">
+                            <img src="assets/image/avon-5.svg" alt="brand_4">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_5.png" alt="brand_4">
+                    <div class="col-lg-12">
+                        <!-- brand img -->
+                        <div class="brand_img">
+                            <img src="assets/image/nivea-1.svg" alt="brand_5">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_1.png" alt="brand_3">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <!-- brand img -->
-                    <div class="brand_img">
-                        <img src="assets/image/brand_3.png" alt="brand_4">
+                    <div class="col-lg-12">
+                        <!-- brand img -->
+                        <div class="brand_img">
+                            <img src="assets/image/oboticario.svg" alt="brand_6" class="margin_top=50px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- brand title end --> 
+        <!-- brand title end --> 
 
     <!-- footer area start -->
     <div class="footer_area" style="background: url(assets/image/footer-bg.jpg); background-size: cover;">
@@ -682,83 +640,78 @@
                 <!-- footer widget -->
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer_widget footer_logo_area">
-                        <h4>About Our Shop</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan</p>
-                        <div class="footer_socail_icons">
-                            <a href="#"><i class="icofont-facebook"></i></a>
-                            <a href="#"><i class="icofont-google-plus"></i></a>
-                            <a href="#"><i class="icofont-x"></i></a>
-                            <a href="#"><i class="icofont-pinterest"></i></a>
-                        </div>
+                        <h4>Sobre Nossa Loja</h4>
+                        <!-- content -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel. 
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
                     </div>
                 </div>
                 <!-- footer widget -->
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer_widget">
-                        <h4>OUR CONTACT</h4>
+                        <h4>NOSSO CONTATO</h4>
                         <div class="footer_address_area">
-                            <p><i class="icofont-home"></i>1245 Rang Raod, medical, E152  95RB</p>
-                            <p><i class="icofont-mobile-phone"></i>Telephone: (922) 3354 2252</p>
-                            <p><i class="icofont-email"></i>demo@example.com</p>
-                            <p><i class="icofont-clock-time"></i>Time: 9.00am-4.00pm</p>
+                            <div class="footer_nav">
+                                <ul>
+                                    <li><span>Endereço:</span>
+                                    <!-- content -->
+                                    <p>United States, Alaska 99508. Illinois </p>
+                                    </li>
+                                    <li><span>E-mail:</span>
+                                        <!-- content -->
+                                        <p>demo@example.com </p>
+                                    </li>
+                                    <li><span>Telefone:</span>
+                                        <!-- content -->
+                                        <p>+088123 456 457, +088987 654 147 </p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- footer nav -->
                 <div class="col-lg-2 col-md-6 col-sm-12">
                     <div class="footer_widget">
-                        <h4>Our Links</h4>
+                        <h4>LINKS RÁPIDOS</h4>
                         <div class="footer_nav">
                             <ul>
-                                <li><a href="#"><i class="icofont-caret-right"></i> About Us</a></li>
-                                <li><a href="#"><i class="icofont-caret-right"></i>Our Contact</a></li>
-                                <li><a href="#"><i class="icofont-caret-right"></i> Our Cycle Collection</a></li>
-                                <li><a href="#"><i class="icofont-caret-right"></i> Our Others Product</a></li>
-                                <li><a href="#"><i class="icofont-caret-right"></i> Product Features</a></li>
+                                <li><a href="#"><i class="icofont-caret-right"></i> Sobre Nós</a></li>
+                                <li><a href="#"><i class="icofont-caret-right"></i>Nosso Contato</a></li>
+                                <li><a href="#"><i class="icofont-caret-right"></i> Nossa Coleção de Ciclos</a></li>
+                                <li><a href="#"><i class="icofont-caret-right"></i> Nosso Outro Produto</a></li>
+                                <li><a href="#"><i class="icofont-caret-right"></i> Características do Produto</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- footer widget -->
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="footer_widget">
-                        <h2>Gallery </h2>
-                        <div class="row footer_wid_sub_img">
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-1.jpg" alt="fimg">
-                                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-9">
+                    <div class="row mgo_main_nav">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="mergo_footer_menu">
+                                <ul>
+                                    <li><a href="about.html">Sobre</a></li>
+                                    <li><a href="portfolio-4column.html">Portfólio</a></li>
+                                    <li><a href="contact.html">Contato</a></li>
+                                    <li><a href="products.html">Produto</a></li>
+                                </ul>
                             </div>
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-2.jpg" alt="fimg">
-                                </div>
-                            </div>
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-3.jpg" alt="fimg">
-                                </div>
-                            </div>
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-4.jpg" alt="fimg">
-                                </div>
-                            </div>
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-5.jpg" alt="fimg">
-                                </div>
-                            </div>
-                            <!-- inner footer widget img -->
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="inner_footer_widget_img">
-                                    <img src="assets/image/blog-6.jpg" alt="fimg">
-                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="mg_nav_icon">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="icofont-facebook"></i></a>
+                                        <a href="#"><i class="icofont-x"></i></a>
+                                        <a href="#"><i class="icofont-instagram"></i></a>
+                                        <a href="#"><i class="icofont-pinterest"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
