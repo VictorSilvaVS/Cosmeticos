@@ -1,0 +1,312 @@
+/*============ Very large Device ===========*/
+@media (min-width:1441px) and (max-width:1800px){
+    .inner_main_nav_area >ul >li >a {
+        margin: 30px 10px 30px;
+    }
+    .main_menu_area {
+        padding: 3px 115px;
+    }
+}
+/*============ Desktop Device ===========*/
+@media (min-width:1366px) and (max-width:1440px){
+    .inner_main_nav_area >ul >li >a {
+        margin: 30px 10px 30px;
+    }
+    .slider_social_link p {
+        width: 61%;
+    }
+    .testimonial_area {
+        background-position: right;
+    }
+    .gm_shop_content h3 a {
+        font-size: 16px;
+    }
+    .main_menu_area {
+        padding: 3px 70px;
+    }
+    .inner_slider_content {
+        width: 90%;
+    }
+    .slider_social_link ul li a {
+        margin: 0 2px 0;
+    }
+}
+/*============ Laptop Device ===========*/
+@media (min-width:1024px) and (max-width:1365px){
+    h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .main_menu_area {
+        padding: 0 29px;
+    }
+    .inner_main_nav_area {
+        margin-left: -110px;
+    }
+     /* slider area css */
+     .inner_slider_content {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .inner_main_nav_area >ul >li >a {
+        margin: 30px 10px 30px;
+        font-size: 13px;
+    }
+     .inner_slider_area{
+        height: 700px;
+    }
+    .inner_slider_content h2, .inner_slider_content h3 {
+        font-size: 50px;
+    }
+    .inner_slider_content p {
+        width: 54%;
+    }
+    .slider_social_link p {
+        width: 80%;
+    }
+    .single_about h2 {
+        font-size: 25px;
+    }
+    .testimonial_area {
+        background-position: bottom;
+    }
+    .test_shap {
+        display: none;
+    }
+    .wirt_new_content p{
+        width: 100% !important;
+    }
+    .inner_counter_area h2 {
+        font-size: 16px;
+    }
+    .footer_widget h4 {
+        font-size: 20px;
+    }
+    .contact_text p {
+        width: 76%;
+    }
+    .ycalender_inner th {
+        padding: 10px 11px;
+        font-size: 14px;
+    }
+    .ycalender_inner td {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+}
+
+/*============= Tablet Large device ===============*/
+@media (min-width:992px) and (max-width:1023px){
+    h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .main_menu_area {
+        padding: 0 29px;
+    }
+    .inner_main_nav_area {
+        margin-left: -110px;
+    }
+    /* slider area css */
+    .inner_slider_content {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .inner_main_nav_area >ul >li >a {
+        margin: 30px 10px 30px;
+        font-size: 13px;
+    }
+     .inner_slider_area{
+        height: 700px;
+    }
+    .inner_slider_content h2,.inner_slider_content h3 {
+        font-size: 32px;
+    }
+    .inner_slider_content p {
+        width: 40%;
+    }
+    .slider_social_link p {
+        width: 76%;
+    }
+    .single_about h2 {
+        font-size: 25px;
+    }
+    .testimonial_area {
+        background-position: bottom;
+    }
+    .contact_text p {
+        width: 76%;
+    }
+    .test_shap {
+        display: none;
+    }
+    .inner_counter_area h2 {
+        font-size: 16px;
+    }
+    .footer_widget h4 {
+        font-size: 20px;
+    }
+    .ycalender_inner th {
+        padding: 10px 11px;
+        font-size: 14px;
+    }
+    .ycalender_inner td {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+}
+
+/*============= Tablet device ===============*/
+@media (min-width:768px) and (max-width:991px){
+    h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .mobile_logo_area {
+        display: block !important;
+        padding: 20px 0 20px;
+    }
+     /* main nav area css */
+     .main_menu_area{
+        display: none;
+    }
+     /* slider area css */
+     .inner_slider_content {
+        width: 87%;
+    }
+    .inner_slider_content h3,.inner_slider_content h2 {
+        font-size: 35px;
+    }
+    .inner_slider_content p {
+        width: 50%;
+    }
+    .inner_slider_area {
+        height: 575px;
+    }
+    .about_shap {
+        top: -70px;
+    }
+    .single_about h2 {
+        font-size: 29px;
+    }
+    .testimonial_area {
+        background-position: right;
+    }
+    .test_shap {
+        display: none;
+    }
+    .main_col_text h2 {
+        font-size: 30px;
+    }
+    .witr_youtube_video {
+        height: 100%;
+    }
+    .ycalender_inner th {
+        padding: 10px 14px;
+    }
+    .inner_breadcum_area {
+        padding-top: 100px;
+        text-align: center;
+    }
+}
+
+/*============= mobile large device ===============*/
+@media (max-width:767px){
+    h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .mobile_logo_area {
+        display: block !important;
+        padding: 20px 0 20px;
+    }
+     /* main nav area css */
+     .main_menu_area{
+        display: none;
+    }
+    .inner_breadcum_area h1 {
+        font-size: 24px;
+    }
+    .inner_breadcum_area {
+        padding: 100px 0;
+    }
+     /* slider area css */
+     .inner_slider_content h2,.inner_slider_content h3 {
+        font-size: 30px;
+    }
+    .about_shap, .body_shap_right, .brand_shap, .test_shap, .right_gm_shap {
+        display: none;
+    }
+    .inner_slider_content p {
+        width: 100%;
+    }
+    .inner_slider_content {
+        text-align: center;
+        width: 100%;
+    }
+    .inner_slider_area {
+        height: 540px;
+        background-position: left;
+    }
+    .single_about h2 {
+        font-size: 29px;
+    }
+    .section_title h2 {
+        font-size: 35px;
+    }
+    .testimonial_area {
+        padding: 85px 0 80px;
+    }
+    .inner_counter_sub_cont h3, .inner_counter_sub_cont span {
+        font-size: 50px;
+    }
+    .client_title h2, .main_col_text h2 {
+        font-size: 27px;
+    }
+    .testimonial_area {
+        background-position: bottom;
+    }
+    /* mobile device */
+    .wirt_new_iner {
+        float: none;
+    }
+    .mer_counter {
+        justify-content: center;
+    }
+    .call_counter {
+        text-align: center;
+    }
+    .mgo_main_nav {
+        text-align: center;
+    }
+    .mg_nav_icon{
+        text-align: center;
+    }
+    .witr_youtube_video {
+        height: 100%;
+    }
+    .inner_breadcum_area {
+        padding-top: 100px;
+        text-align: center;
+    }
+    .copyright_menu, .copyright_text p, .footer_area {
+        text-align: center;
+    }
+    .inner_faq_ac_item a.active::before {
+        border: none;
+        right: 0;
+    }
+    .inner_faq_ac_item a i {
+        border: none;
+    }
+    #scrollUp {
+        bottom: 76px;
+        right: 15px;
+    }
+    .inner_contact_area h2 {
+        font-size: 31px;
+    }
+    .ycalender_inner {
+        padding: 20px 5px;
+    }
+}
