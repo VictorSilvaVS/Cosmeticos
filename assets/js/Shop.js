@@ -241,7 +241,7 @@ function removeFromCart(productId) {
 
 // Modificar a mensagem do WhatsApp
 function finishPurchase() {
-    const whatsappNumber = "558584298948";
+    const whatsappNumber = "555555555555";
     
     const now = new Date();
     const hour = now.getHours();
