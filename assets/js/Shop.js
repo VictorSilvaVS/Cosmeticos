@@ -84,6 +84,12 @@ const cartItems = document.querySelector(".cart-items");
 const cartProductList = document.querySelector(".cart-product-list");
 const emptyCartMessage = document.querySelector(".empty-cart");
 
+// Seleciona todos os contadores de carrinho e listas de produtos
+const cartCounts = document.querySelectorAll(".cart-count");
+const cartItemsContainers = document.querySelectorAll(".cart-items");
+const cartProductLists = document.querySelectorAll(".cart-product-list");
+const emptyCartMessages = document.querySelectorAll(".empty-cart");
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartUI();
 
@@ -123,114 +129,125 @@ function addToCart(productId, productName, productPrice, productImage) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Modificar a exibição de preço no carrinho
-function updateCartUI() {
-    cartCount.innerText = cart.reduce((total, item) => total + item.quantity, 0);
+// Atualiza todos os elementos do carrinho em todas as visualizações
+function updateAllCartUI() {
+    // Atualiza todos os contadores
+    cartCounts.forEach(counter => {
+        counter.innerText = cart.reduce((total, item) => total + item.quantity, 0);
+    });
 
-    // Remove a rolagem do container principal do carrinho
-    cartItems.style.overflow = 'hidden';
-    cartItems.style.height = 'auto';
-    cartItems.style.maxHeight = '400px';
+    // Atualiza todas as listas de produtos do carrinho
+    cartItemsContainers.forEach(container => {
+        container.style.overflow = 'hidden';
+        container.style.height = 'auto';
+        container.style.maxHeight = '400px';
+    });
 
-    cartProductList.innerHTML = "";
-    
-    if (cart.length === 0) {
-        emptyCartMessage.style.display = "block";
-    } else {
-        emptyCartMessage.style.display = "none";
-        let totalAmount = 0;
+    cartProductLists.forEach(productList => {
+        productList.innerHTML = "";
         
-        const productListContainer = document.createElement('div');
-        productListContainer.style.maxHeight = '250px'; // Ajusta a altura máxima da lista
-        productListContainer.style.overflowY = 'auto'; // Mantém apenas a rolagem vertical dos itens
-        productListContainer.style.overflowX = 'hidden'; // Remove rolagem horizontal
-        productListContainer.style.paddingRight = '5px'; // Espaço para a barra de rolagem
-        productListContainer.style.marginBottom = '0';
-        
-        // Lista de produtos
-        cart.forEach((item, index) => {
-            totalAmount += item.price * item.quantity;
-            const li = document.createElement('li');
-            li.classList.add('cart-item');
-            li.style.display = 'flex';
-            li.style.alignItems = 'flex-start';
-            li.style.gap = '15px';
-            li.style.padding = '10px';
-            li.style.position = 'relative';
+        if (cart.length === 0) {
+            emptyCartMessages.forEach(msg => msg.style.display = "block");
+        } else {
+            emptyCartMessages.forEach(msg => msg.style.display = "none");
             
-            li.innerHTML = `
-                <div class="cart-item-image" style="width: 60px; height: 60px; flex-shrink: 0;">
-                    <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <div class="cart-item-details" style="flex-grow: 1;">
-                    <h4 style="margin: 0; font-weight: bold; font-size: 14px;">${item.name}</h4>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
-                        <p style="margin: 0;">R$ ${item.price}</p>
-                        <p style="margin: 0;">Qtd: ${item.quantity}</p>
+            let totalAmount = 0;
+            
+            const productListContainer = document.createElement('div');
+            productListContainer.style.maxHeight = '250px';
+            productListContainer.style.overflowY = 'auto';
+            productListContainer.style.overflowX = 'hidden';
+            productListContainer.style.paddingRight = '5px';
+            productListContainer.style.marginBottom = '0';
+            
+            cart.forEach((item, index) => {
+                totalAmount += item.price * item.quantity;
+                const li = document.createElement('li');
+                li.classList.add('cart-item');
+                li.style.display = 'flex';
+                li.style.alignItems = 'flex-start';
+                li.style.gap = '15px';
+                li.style.padding = '10px';
+                li.style.position = 'relative';
+                
+                li.innerHTML = `
+                    <div class="cart-item-image" style="width: 60px; height: 60px; flex-shrink: 0;">
+                        <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
+                    <div class="cart-item-details" style="flex-grow: 1;">
+                        <h4 style="margin: 0; font-weight: bold; font-size: 14px;">${item.name}</h4>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+                            <p style="margin: 0;">R$ ${item.price}</p>
+                            <p style="margin: 0;">Qtd: ${item.quantity}</p>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart('${item.id}')" style="
+                        position: absolute;
+                        right: 10px;
+                        top: 35%;
+                        transform: translateY(-50%);
+                        background: none;
+                        border: none;
+                        color: #ff0000;
+                        font-size: 16px;
+                        cursor: pointer;
+                        padding: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">✕</button>
+                `;
+                
+                productListContainer.appendChild(li);
+                
+                if (index < cart.length - 1) {
+                    const hr = document.createElement('hr');
+                    hr.style.margin = '5px 0';
+                    hr.style.border = '0';
+                    hr.style.borderTop = '1px solid #eee';
+                    productListContainer.appendChild(hr);
+                }
+            });
+
+            productList.appendChild(productListContainer);
+
+            const totalDiv = document.createElement('div');
+            totalDiv.style.borderTop = '2px solid #ddd';
+            totalDiv.style.backgroundColor = 'white';
+            totalDiv.style.padding = '10px';
+            totalDiv.style.position = 'sticky';
+            totalDiv.style.bottom = '0';
+            totalDiv.style.left = '0';
+            totalDiv.style.right = '0';
+            totalDiv.style.width = '100%';
+            
+            totalDiv.innerHTML = `
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <strong>Total:</strong>
+                    <span>R$ ${totalAmount.toFixed(2)}</span>
                 </div>
-                <button onclick="removeFromCart('${item.id}')" style="
-                    position: absolute;
-                    right: 10px;
-                    top: 35%;
-                    transform: translateY(-50%);
-                    background: none;
+                <button onclick="finishPurchase()" style="
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #25D366;
+                    color: white;
                     border: none;
-                    color: #ff0000;
-                    font-size: 16px;
+                    border-radius: 5px;
                     cursor: pointer;
-                    padding: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                ">✕</button>
+                    font-weight: bold;
+                ">
+                    Finalizar Compra!
+                </button>
             `;
             
-            productListContainer.appendChild(li);
-            
-            if (index < cart.length - 1) {
-                const hr = document.createElement('hr');
-                hr.style.margin = '5px 0';
-                hr.style.border = '0';
-                hr.style.borderTop = '1px solid #eee';
-                productListContainer.appendChild(hr);
-            }
-        });
+            productList.appendChild(totalDiv);
+        }
+    });
+}
 
-        cartProductList.appendChild(productListContainer);
-
-        // Adiciona o total e botão de finalizar
-        const totalDiv = document.createElement('div');
-        totalDiv.style.borderTop = '2px solid #ddd';
-        totalDiv.style.backgroundColor = 'white';
-        totalDiv.style.padding = '10px';
-        totalDiv.style.position = 'sticky';
-        totalDiv.style.bottom = '0';
-        totalDiv.style.left = '0';
-        totalDiv.style.right = '0';
-        totalDiv.style.width = '100%';
-        
-        totalDiv.innerHTML = `
-            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                <strong>Total:</strong>
-                <span>R$ ${totalAmount.toFixed(2)}</span>
-            </div>
-            <button onclick="finishPurchase()" style="
-                width: 100%;
-                padding: 10px;
-                background-color: #25D366;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: bold;
-            ">
-                Finalizar Compra!
-            </button>
-        `;
-        
-        cartProductList.appendChild(totalDiv);
-    }
+// Substituir a função updateCartUI original pela nova versão
+function updateCartUI() {
+    updateAllCartUI();
 }
 
 function removeFromCart(productId) {
@@ -241,7 +258,7 @@ function removeFromCart(productId) {
 
 // Modificar a mensagem do WhatsApp
 function finishPurchase() {
-    const whatsappNumber = "555555555555";
+    const whatsappNumber = "558584298948";
     
     const now = new Date();
     const hour = now.getHours();
